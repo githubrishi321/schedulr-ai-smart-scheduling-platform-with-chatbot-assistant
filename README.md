@@ -1,6 +1,6 @@
-# Schedulr — Smart Scheduling Platform
+# Schedulr â€” Smart Scheduling Platform
 
-A full-stack, production-ready scheduling platform (Calendly clone) built with Next.js 14, Supabase, NextAuth.js v5, Google Calendar API, Groq AI, and Resend email.
+A full-stack, production-ready scheduling platform  built with Next.js 14, Supabase, NextAuth.js v5, Google Calendar API, Groq AI, and Resend email.
 
 ## Features
 
@@ -22,11 +22,11 @@ A full-stack, production-ready scheduling platform (Calendly clone) built with N
 |---|---|
 | **Next.js 14 App Router** | SSR, file-based routing, API routes in one codebase, Vercel-optimised. Server Components reduce client JS bundle. |
 | **Supabase (PostgreSQL)** | Managed PostgreSQL with Row Level Security, real-time subscriptions, built-in auth SDK, free tier for development. |
-| **NextAuth.js v5** | Battle-tested auth library — supports Google OAuth + credentials, built-in CSRF protection, JWT session management. |
+| **NextAuth.js v5** | Battle-tested auth library â€” supports Google OAuth + credentials, built-in CSRF protection, JWT session management. |
 | **date-fns-tz** | Lightweight (tree-shakeable), immutable, modern timezone handling. Safer than moment.js which is 67KB+ and deprecated. |
 | **Tailwind CSS v4** | Utility-first, zero CSS file bloat, mobile-first responsive design, dark mode via class strategy. |
 | **Resend** | Developer-friendly email API, excellent deliverability, React email template support, generous free tier. |
-| **Groq API (LLaMA 3.3 70B)** | 100% FREE — no credit card required. Fastest LLM inference available. OpenAI-compatible API format. LLaMA 3.3 70B delivers excellent reasoning for scheduling tasks. Easy to swap models in future. |
+| **Groq API (LLaMA 3.3 70B)** | 100% FREE â€” no credit card required. Fastest LLM inference available. OpenAI-compatible API format. LLaMA 3.3 70B delivers excellent reasoning for scheduling tasks. Easy to swap models in future. |
 
 ## Local Setup
 
@@ -62,7 +62,7 @@ Open [http://localhost:3000](http://localhost:3000)
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase service role key (server-side admin use only) |
 | `GOOGLE_CLIENT_ID` | Google OAuth 2.0 client ID from Google Cloud Console |
 | `GOOGLE_CLIENT_SECRET` | Google OAuth 2.0 client secret |
-| `GROQ_API_KEY` | **FREE** from [console.groq.com](https://console.groq.com) — no credit card! |
+| `GROQ_API_KEY` | **FREE** from [console.groq.com](https://console.groq.com) â€” no credit card! |
 | `RESEND_API_KEY` | Resend transactional email API key |
 | `FROM_EMAIL` | Sender email address (must be verified in Resend) |
 | `CRON_SECRET` | Random secret to authenticate cron job requests |
@@ -89,7 +89,7 @@ Open [http://localhost:3000](http://localhost:3000)
 3. Create an API key
 4. Add to `.env.local` as `GROQ_API_KEY`
 
-## AI Assistant — How It Works
+## AI Assistant â€” How It Works
 
 The AI chatbot in the dashboard is powered by **Groq API** using the `llama-3.3-70b-versatile` model.
 
@@ -168,10 +168,10 @@ supabase/            ? Database schema SQL
 
 ## Development Notes
 
-**LLM used:** Groq API (free tier) with `llama-3.3-70b-versatile` model — chosen because it is completely free, requires no credit card, delivers the fastest inference speeds of any LLM API, and uses an OpenAI-compatible format making integration trivial.
+**LLM used:** Groq API (free tier) with `llama-3.3-70b-versatile` model â€” chosen because it is completely free, requires no credit card, delivers the fastest inference speeds of any LLM API, and uses an OpenAI-compatible format making integration trivial.
 
 **Key decisions:**
-1. Supabase over raw PostgreSQL — managed service with free tier, excellent DX, built-in auth
-2. NextAuth v5 (beta) — latest version with App Router support, stable enough for production
-3. All times stored as UTC, displayed using date-fns-tz — eliminates DST edge cases
-4. Service role key only on server — anon key safe to expose to browser via NEXT_PUBLIC_
+1. Supabase over raw PostgreSQL â€” managed service with free tier, excellent DX, built-in auth
+2. NextAuth v5 (beta) â€” latest version with App Router support, stable enough for production
+3. All times stored as UTC, displayed using date-fns-tz â€” eliminates DST edge cases
+4. Service role key only on server â€” anon key safe to expose to browser via NEXT_PUBLIC_
